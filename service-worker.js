@@ -17,6 +17,8 @@ importScripts(
   "/precache-manifest.87384ce23aeffac04ec38f51238a4733.js"
 );
 
+importScripts("https://js.pusher.com/beams/service-worker.js");
+
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
