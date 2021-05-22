@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>БАЛБЕСЫ</title>
+</head>
+
+<body>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+	:root {
+		--text_secondary: #fff;
+	}
+	
+	;
+	body {
+		text-rendering: optimizeSpeed;
+		font-family: 'Roboto';
+	}
+	
+	body {
+		background: #0E1621;
+		margin-right: 8%;
+		color: #fff;
+		margin-left: 8%;
+	}
+	
+	@media (min-width: 320px) and (max-width: 480px) {
+		body {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	}
+	
+	.hello {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 46px;
+		font-family: 'Roboto';
+		width: 100%;
+		line-height: 117px;
+		/* identical to box height */
+		color: #FFFFFF;
+	}
+	
+	.hello-subtitle {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		width: 100%;
+		line-height: 44px;
+		font-family: 'Roboto';
+		text-align: center;
+		color: #FFFFFF;
+	}
+	
+	.Cell {
+		padding: 8px;
+		display: flex !important;
+		align-items: center;
+		font-family: 'Roboto';
+	}
+	
+	.Cell--before {
+		margin-right: 12px;
+	}
+	
+	.Cell--text {
+		flex-grow: 1;
+	}
+	
+	.Cell--title {
+		font-size: 20px;
+	}
+	
+	.Cell--desc {
+		font-size: 20px;
+		color: var(--text_secondary);
+	}
+	
+	.Cell--after {
+		color: var(--text_secondary);
+		margin-left: 4px;
+	}
+	
+	.bottom {
+		font-style: normal;
+		font-weight: normal;
+		font-family: 'Roboto';
+		width: 100%;
+		font-size: 20px;
+		line-height: 44px;
+		/* identical to box height */
+		text-align: center;
+		color: #FFFFFF;
+	}
+	</style>
+	<center>
+		<div class='hello'>Привет!</div>
+	</center>
+	<center>
+		<div class='hello-subtitle'>Мы - команда разработчиков. Любим участвовать в различных конкурсах и хакатонах. Давай познакомимся?</div>
+	</center>
+	<br />
+	<br />
+	<div class="Cell">
+		<div class="Cell--before"> <img src='https://sun9-54.userapi.com/impg/IMnmwR1znCnFVy2nkyvxJTgS15MHKy4sv1A9uA/Pp3pWuLj0Rs.jpg?size=2169x2160&quality=96&sign=b596e59ee202e1bf8e64f7fdbccfab86&type=album' width="100" height="100" style="border-radius: 50%" /> </div>
+		<div class="Cell--text">
+			<div class="Cell--title">Даниил Барт</div>
+			<div class="Cell--desc">Full-Stack Developer</div>
+		</div>
+	</div>
+	<div class="Cell">
+		<div class="Cell--before"> <img src='https://sun9-65.userapi.com/impg/8o0wHrS2WBXGmWlyneS5huq2rFGvnaxe8S9SFA/BoAxqmWmVdk.jpg?size=1622x2160&quality=96&sign=10924028a07c371b3287f496e418e5bc&type=album' width="100" height="100" style="border-radius: 50%" /> </div>
+		<div class="Cell--text">
+			<div class="Cell--title">Никита Предеин</div>
+			<div class="Cell--desc">Backend Developer & Designer</div>
+		</div>
+	</div>
+	<br />
+	<div class='bottom'>Да, нас всего двое, но это не значит, что мы - не команда</div>
+	<br /> </body>
+
+</html>
