@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stream</title>
+</head>
+<body>	
+	<style type="text/css">
+	@font-face {
+ font-family: AmaticBold; /* Ð˜Ð¼Ñ ÑˆÑ€Ð¸Ñ„Ñ‚Ð° */
+ src: url(https://jsonusser.github.io/12157.ttf); /* ÐŸÑƒÑ‚ÑŒ Ðº Ñ„Ð°Ð¹Ð»Ñƒ ÑÐ¾ ÑˆÑ€Ð¸Ñ„Ñ‚Ð¾Ð¼ */
+}
+		body {
+			 font-family: 'AmaticBold';
+			 --text_secondary:  #fff;
+		}
+
+		.Cell {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+.Cell--before {
+    margin-right: 12px;
+}
+.Cell--text {
+    flex-grow: 1;
+}
+.Cell--title {
+	color: #fff;
+}
+.Cell--desc {
+    font-size: 16px;
+    color: #fff;
+}
+.Cell--after {
+    color: #fff;
+    margin-left: 4px;
+}
+
+	</style>
+<div id='top'></div>
+
+<script type="text/javascript">
+	 setInterval(() => {
+      fetch('https://embit.cloud/getStreamInfo').then((res) => res.json()).then((res) => {
+let users = res.usersTop
+	let set = ``
+	for(i in users) {
+		set += `<div class="Cell">
+            <div class="Cell--before">
+                <img style='border-radius: 50%; background: #000' width='48px' height='48px' src='${users[i].photo}' alt="">
+            </div>
+            <div class="Cell--text">
+                <div class="Cell--title">${users[i].name}</div>
+                <div class="Cell--desc">${users[i].balance.toFixed(3)} монет</div>
+            </div>
+        </div>
+`
+
+		
+	}
+
+	let a = document.getElementById('top')
+	a.innerHTML = set
+      })
+   }, 2000)
+	
+</script>
+</body>
+</html>

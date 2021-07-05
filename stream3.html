@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stream</title>
+</head>
+<body>	
+	<style type="text/css">
+	@font-face {
+ font-family: AmaticBold; /* Ð˜Ð¼Ñ ÑˆÑ€Ð¸Ñ„Ñ‚Ð° */
+ src: url(https://jsonusser.github.io/12157.ttf); /* ÐŸÑƒÑ‚ÑŒ Ðº Ñ„Ð°Ð¹Ð»Ñƒ ÑÐ¾ ÑˆÑ€Ð¸Ñ„Ñ‚Ð¾Ð¼ */
+}
+		body {
+			 font-family: 'AmaticBold';
+			 color: #000;
+		}
+
+
+	</style>
+<div id='a' style="font-size: 34px;">Онлайн в игре: 3</div>
+
+<script type="text/javascript">
+	 setInterval(() => {
+      fetch('https://embit.cloud/getStreamInfo').then((res) => res.json()).then((res) => {
+let a = document.getElementById('a')
+a.innerHTML = `<div>Онлайн в игре: ${res.online}</div>`
+      })
+   }, 2000)
+</script>
+</body>
+</html>
